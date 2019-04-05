@@ -1,0 +1,5 @@
+	filter-for:
+    excluded_paths:
+        - tests/*
+      - if
+NuCypherActiveDirectory/*
