@@ -1,0 +1,40 @@
+{
+    "name": "NuCypherActiveDirectory/NuCypherActiveDirectory-laravel",
+    "description": "LDAP Auth & Management for NuCypherActiveDirectory.",
+    "keywords": ["NuCypherActiveDirectory"],
+    "type": "project",
+    "require": {
+        "php": ">=7.1",
+        "NuCypherActiveDirectory": "^10.0",
+        "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~7.0",
+        "orchestra/testbench": "~3.7"
+    },
+    "archive": {
+        "exclude": ["/tests"]
+    },
+    "autoload": {
+        "psr-4": {
+            "NuCypherActiveDirectory\\NuCypherActiveDirectory\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NuCypherActiveDirectory\\NuCypherActiveDirectory\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NuCypherActiveDirectory\\NuCypherActiveDirectory\\ServiceProvider",
+                "NuCypherActiveDirectory\\NuCypherActiveDirectory\\AuthServiceProvider"
+            ],
+            "aliases": {
+                "NuCypherActiveDirectory": "NuCypherActiveDirectory\\Facades\\Adldap"
+            }
+        }
+    }
+}

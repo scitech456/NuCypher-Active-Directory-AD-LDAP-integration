@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         convertErrorsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+        >
+    <testsuites>
+        <testsuite name="NuCypherActiveDirectory">
+            <directory suffix="NuCypherActiveDirectory.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
